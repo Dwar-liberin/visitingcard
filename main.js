@@ -19,7 +19,7 @@
               appName: "DwAR",
               customerId: "4",
               campaignName: "card",
-              serverUrl: "https://staging.lttl.in/event"
+              serverUrl: "https://lttl.in/event"
           }
        );
 
@@ -130,12 +130,12 @@
   const light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
   scene.add(light);
 
-  const loadFont = () => {
+  const loadFont = (fontURL) => {
     return new Promise((resolve, reject) => {
       const loader = new THREE.FontLoader();
 
       loader.load(
-        "https://cdn.jsdelivr.net/gh/mrdoob/three.js/examples/fonts/helvetiker_regular.typeface.json",
+        fontURL,
         (font) => {
           resolve(font); // Resolve the promise with the loaded font
         },
@@ -147,70 +147,142 @@
     });
   };
 
-  const font = await loadFont();
-  
-
   
     
-      const target_image52771f20ee0_iconGeometry = new THREE.PlaneGeometry(1, 0.6167341430499326);
-   const target_image52771f20ee0_texture = await loadTexture("assets/Prateek CYMK-V5-1.png");
-  const target_image52771f20ee0_image = new THREE.MeshBasicMaterial({
-      map: target_image52771f20ee0_texture,
+      const logo_5e388fea_84765e388_iconGeometry = new THREE.CircleGeometry(0.5,32);
+   const logo_5e388fea_84765e388_texture = await loadTexture("assets/circle-wa-sm_113.png");
+  const logo_5e388fea_84765e388_image = new THREE.MeshBasicMaterial({
+      map: logo_5e388fea_84765e388_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const target_image52771f20ee0 = new THREE.Mesh(target_image52771f20ee0_iconGeometry, target_image52771f20ee0_image);
-    target_image52771f20ee0.scale.set(1, 1, 1);
-    target_image52771f20ee0.position.set(0.01, -0.01, 0.01);
-    target_image52771f20ee0.rotation.set(-0.001, 0, 0);
+    const logo_5e388fea_84765e388 = new THREE.Mesh(logo_5e388fea_84765e388_iconGeometry, logo_5e388fea_84765e388_image);
+    logo_5e388fea_84765e388.scale.set(0.2, 0.2, 0.2);
+    logo_5e388fea_84765e388.position.set(0.65, 0, 0);
+    logo_5e388fea_84765e388.rotation.set(-0.001, 0, 0);
+    logo_5e388fea_84765e388.userData.clickable = true
     
-    
-    
-const square_linkedin_4c4c6d5_iconGeometry = new THREE.PlaneGeometry(1, 0.3);
-   const square_linkedin_4c4c6d5_texture = await loadTexture("assets/square-linkedin_103.svg");
-  const square_linkedin_4c4c6d5_image = new THREE.MeshBasicMaterial({
-      map: square_linkedin_4c4c6d5_texture,
+    logo_5e388fea_84765e388.userData.eventName ="Whatsapp"
+const logo_ae20a04a_eccdae20a_iconGeometry = new THREE.CircleGeometry(0.5,32);
+   const logo_ae20a04a_eccdae20a_texture = await loadTexture("assets/circle-mail-sm_125.png");
+  const logo_ae20a04a_eccdae20a_image = new THREE.MeshBasicMaterial({
+      map: logo_ae20a04a_eccdae20a_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
     });
-    const square_linkedin_4c4c6d5 = new THREE.Mesh(square_linkedin_4c4c6d5_iconGeometry, square_linkedin_4c4c6d5_image);
-    square_linkedin_4c4c6d5.scale.set(0.4, 0.4, 1);
-    square_linkedin_4c4c6d5.position.set(0, -0.4, 0.04);
-    square_linkedin_4c4c6d5.rotation.set(-0.001, 0, 0);
-    square_linkedin_4c4c6d5.userData.clickable = true
+    const logo_ae20a04a_eccdae20a = new THREE.Mesh(logo_ae20a04a_eccdae20a_iconGeometry, logo_ae20a04a_eccdae20a_image);
+    logo_ae20a04a_eccdae20a.scale.set(0.2, 0.2, 0.2);
+    logo_ae20a04a_eccdae20a.position.set(0.65, 0.25, 0);
+    logo_ae20a04a_eccdae20a.rotation.set(-0.001, 0, 0);
+    logo_ae20a04a_eccdae20a.userData.clickable = true
     
-    square_linkedin_4c4c6d5.userData.eventName ="Linkedin"
+    logo_ae20a04a_eccdae20a.userData.eventName ="Email"
+const square_linkedin_4c60777_iconGeometry = new THREE.PlaneGeometry(1, 0.3);
+   const square_linkedin_4c60777_texture = await loadTexture("assets/square-linkedin_103.svg");
+  const square_linkedin_4c60777_image = new THREE.MeshBasicMaterial({
+      map: square_linkedin_4c60777_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const square_linkedin_4c60777 = new THREE.Mesh(square_linkedin_4c60777_iconGeometry, square_linkedin_4c60777_image);
+    square_linkedin_4c60777.scale.set(0.6, 0.6, 0.6);
+    square_linkedin_4c60777.position.set(0.203, -0.564, 0);
+    square_linkedin_4c60777.rotation.set(0, 0, 0);
+    square_linkedin_4c60777.userData.clickable = true
+    
+    square_linkedin_4c60777.userData.eventName ="Linkedin"
+const logo_7ff333e0_636d7ff33_iconGeometry = new THREE.CircleGeometry(0.5,32);
+   const logo_7ff333e0_636d7ff33_texture = await loadTexture("assets/circle-call-sm_118.png");
+  const logo_7ff333e0_636d7ff33_image = new THREE.MeshBasicMaterial({
+      map: logo_7ff333e0_636d7ff33_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const logo_7ff333e0_636d7ff33 = new THREE.Mesh(logo_7ff333e0_636d7ff33_iconGeometry, logo_7ff333e0_636d7ff33_image);
+    logo_7ff333e0_636d7ff33.scale.set(0.2, 0.2, 0.2);
+    logo_7ff333e0_636d7ff33.position.set(0.65, -0.24, 0);
+    logo_7ff333e0_636d7ff33.rotation.set(-0.001, 0, 0);
+    logo_7ff333e0_636d7ff33.userData.clickable = true
+    
+    logo_7ff333e0_636d7ff33.userData.eventName ="Call"
+const image_7a749534_4294feb0_iconGeometry = new THREE.PlaneGeometry(1, 1);
+   const image_7a749534_4294feb0_texture = await loadTexture("assets/chinmay-garg.jpg");
+  const image_7a749534_4294feb0_image = new THREE.MeshBasicMaterial({
+      map: image_7a749534_4294feb0_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const image_7a749534_4294feb0 = new THREE.Mesh(image_7a749534_4294feb0_iconGeometry, image_7a749534_4294feb0_image);
+    image_7a749534_4294feb0.scale.set(0.3, 0.3, 0.3);
+    image_7a749534_4294feb0.position.set(-0.322, -0.496, 0.045);
+    image_7a749534_4294feb0.rotation.set(-0.001, 0, 0);
+    
+    
+    
+const target_imageChinma00bca_iconGeometry = new THREE.PlaneGeometry(1, 0.6167341430499326);
+   const target_imageChinma00bca_texture = await loadTexture("assets/Chinmay CYMK-V5-1.png");
+  const target_imageChinma00bca_image = new THREE.MeshBasicMaterial({
+      map: target_imageChinma00bca_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const target_imageChinma00bca = new THREE.Mesh(target_imageChinma00bca_iconGeometry, target_imageChinma00bca_image);
+    target_imageChinma00bca.scale.set(1, 1, 1);
+    target_imageChinma00bca.position.set(0.01, -0.01, 0.01);
+    target_imageChinma00bca.rotation.set(-0.001, 0, 0);
+    
+    
+    
+const image_1658cb04_9ccbd20a_iconGeometry = new THREE.PlaneGeometry(1, 0.62);
+   const image_1658cb04_9ccbd20a_texture = await loadTexture("assets/Chinmay CYMK-V5-1.png");
+  const image_1658cb04_9ccbd20a_image = new THREE.MeshBasicMaterial({
+      map: image_1658cb04_9ccbd20a_texture,
+      transparent: true,
+      side: THREE.DoubleSide,
+    });
+    const image_1658cb04_9ccbd20a = new THREE.Mesh(image_1658cb04_9ccbd20a_iconGeometry, image_1658cb04_9ccbd20a_image);
+    image_1658cb04_9ccbd20a.scale.set(1, 1, 1);
+    image_1658cb04_9ccbd20a.position.set(0, 0, 0);
+    image_1658cb04_9ccbd20a.rotation.set(-0.001, 0, 0);
+    
+    
+    
 
-    const video_asset_3696eb08a36_planeGeometry = new THREE.PlaneGeometry(1, 0.5625);
+    const video_asset_3696ebdd81e_planeGeometry = new THREE.PlaneGeometry(1, 0.5625);
 
-    const video_asset_3696eb08a36_Item0Video = await loadVideo("assets/Liberin Technologies.mp4");
+    const video_asset_3696ebdd81e_Item0Video = await loadVideo("assets/Liberin Technologies.mp4");
 
-    const video_asset_3696eb08a36_Item0VideoTexture = new THREE.VideoTexture(
-      video_asset_3696eb08a36_Item0Video
+    const video_asset_3696ebdd81e_Item0VideoTexture = new THREE.VideoTexture(
+      video_asset_3696ebdd81e_Item0Video
     );
 
-    let video_asset_3696eb08a36_Item0VideoMaterial
+    let video_asset_3696ebdd81e_Item0VideoMaterial
 
-      video_asset_3696eb08a36_Item0VideoMaterial = new THREE.MeshBasicMaterial({
-          map: video_asset_3696eb08a36_Item0VideoTexture,
+      video_asset_3696ebdd81e_Item0VideoMaterial = new THREE.MeshBasicMaterial({
+          map: video_asset_3696ebdd81e_Item0VideoTexture,
+          transparent:true
         })
     
-     const video_asset_3696eb08a36 = new THREE.Mesh(
-      video_asset_3696eb08a36_planeGeometry,
-      video_asset_3696eb08a36_Item0VideoMaterial
+     const video_asset_3696ebdd81e = new THREE.Mesh(
+      video_asset_3696ebdd81e_planeGeometry,
+      video_asset_3696ebdd81e_Item0VideoMaterial
     );
 
-  video_asset_3696eb08a36.position.set(0, 0.634, 0.1);
+  video_asset_3696ebdd81e.position.set(0, 0.63, 0);
 
 
 
   if (isIOS) {
-    video_asset_3696eb08a36_Item0Video.muted=isIOS
+    video_asset_3696ebdd81e_Item0Video.muted=isIOS
     muteIconMesh = await loadUnmuteLogo();
     anchor.group.add(muteIconMesh);
   }
 
-  video_asset_3696eb08a36_Item0Video.loop=true;
+  video_asset_3696ebdd81e_Item0Video.loop=true;
   
-  video_asset_3696eb08a36.scale.set(1, 1, 1);
+  video_asset_3696ebdd81e.scale.set(1, 1, 1);
 
-    video_asset_3696eb08a36.rotation.set(-0.001, 0, 0);
+    video_asset_3696ebdd81e.rotation.set(0, 0, 0);
 
     
   
@@ -246,7 +318,7 @@ const square_linkedin_4c4c6d5_iconGeometry = new THREE.PlaneGeometry(1, 0.3);
 
         if(isIOS){ 
           if (o.userData.clickable && o === muteIconMesh) {
-            video_asset_3696eb08a36_Item0Video.muted=false
+            video_asset_3696ebdd81e_Item0Video.muted=false
     
             anchor.group.remove(muteIconMesh);
             return true;
@@ -259,9 +331,30 @@ const square_linkedin_4c4c6d5_iconGeometry = new THREE.PlaneGeometry(1, 0.3);
       if (o.userData.clickable) window.showLoadingScreen();
 
       
-      if (o.userData.clickable && o === square_linkedin_4c4c6d5) {
+      if (o.userData.clickable && o === logo_5e388fea_84765e388) {
         setTimeout(()=>{
-          window.location.href = "https://www.linkedin.com/in/prateeksengupta/"
+          window.location.href = "https://wa.me/9891883207?text=messageHear"
+        },100)
+        }
+      
+
+      if (o.userData.clickable && o === logo_ae20a04a_eccdae20a) {
+        setTimeout(()=>{
+          window.location.href = "mailto:chinmay@liberintechnologies.com"
+        },100)
+        }
+      
+
+      if (o.userData.clickable && o === square_linkedin_4c60777) {
+        setTimeout(()=>{
+          window.location.href = "https://www.linkedin.com/in/chinmay-garg/"
+        },100)
+        }
+      
+
+      if (o.userData.clickable && o === logo_7ff333e0_636d7ff33) {
+        setTimeout(()=>{
+          window.location.href = "tel:9891883207"
         },100)
         }
       
@@ -270,9 +363,14 @@ const square_linkedin_4c4c6d5_iconGeometry = new THREE.PlaneGeometry(1, 0.3);
     })
     
       
-    
-anchor.group.add(square_linkedin_4c4c6d5)
-anchor.group.add(video_asset_3696eb08a36)
+    anchor.group.add(logo_5e388fea_84765e388)
+anchor.group.add(logo_ae20a04a_eccdae20a)
+anchor.group.add(square_linkedin_4c60777)
+anchor.group.add(logo_7ff333e0_636d7ff33)
+anchor.group.add(image_7a749534_4294feb0)
+
+anchor.group.add(image_1658cb04_9ccbd20a)
+anchor.group.add(video_asset_3696ebdd81e)
 
 
     anchor.onTargetFound = () => {
@@ -288,15 +386,25 @@ anchor.group.add(video_asset_3696eb08a36)
 
 
 
+
+
+
+
+
      
-      video_asset_3696eb08a36_Item0Video.play();
+      video_asset_3696ebdd81e_Item0Video.play();
     };
 
 
     anchor.onTargetLost = () => {
-       video_asset_3696eb08a36_Item0Video.pause();
+       video_asset_3696ebdd81e_Item0Video.pause();
 
         
+
+
+
+
+
 
 
     }
